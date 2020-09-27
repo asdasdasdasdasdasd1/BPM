@@ -1,0 +1,5 @@
+---
+- hosts: galera
+  remote_user: rotar
+  roles:
+    - { role: cluster }

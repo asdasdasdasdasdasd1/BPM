@@ -1,0 +1,2 @@
+# galera-cluster-init
+

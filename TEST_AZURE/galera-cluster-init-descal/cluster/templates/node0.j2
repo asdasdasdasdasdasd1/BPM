@@ -1,0 +1,10 @@
+[mysqld]
+bind-address={{ ansible_default_ipv4.address }}
+[galera]
+wsrep_on=ON
+wsrep_provider=/usr/lib64/galera/libgalera_smm.so
+binlog_format=row
+wsrep_cluster_address="gcomm://"
+#wsrep_cluster_address="gcomm://{{ ip_node1 }}"
+wsrep_cluster_name="{{ cluster_name }}"
+wsrep_node_name="node_{{ ansible_hostname }}"

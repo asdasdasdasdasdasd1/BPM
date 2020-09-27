@@ -1,0 +1,7 @@
+---
+# vars file for cluster
+ip_node0: 172.250.50.17
+ip_node1: 172.250.50.18
+user_remote: remote
+pass_remote: g4l3r42020
+cluster_name: galera_cluster_descal

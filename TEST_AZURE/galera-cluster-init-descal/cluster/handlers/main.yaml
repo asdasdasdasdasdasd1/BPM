@@ -1,0 +1,17 @@
+---
+# handlers file for cluster
+- name: "Reload firewall"
+  become: yes
+  shell: "firewall-cmd --reload"
+
+- name: "Permissive mysqld_t"
+  become: yes
+  shell: "semanage permissive -a mysqld_t"
+
+- name: "Start firewalld"
+  become: yes
+  shell: "systemctl start firewalld"
+
+- name: "Enable firewalld"
+  become: yes
+  shell: "systemctl enable firewalld"

@@ -1,0 +1,15 @@
+# Address to listen for client connections at. Mandatory parameter.
+# To bind to all interfaces only port should be specified.
+LISTEN_ADDR="13306"
+
+# Address for controlling connection. Mandatory part is port.
+# If not specified control socket will not be opened
+CONTROL_ADDR="127.0.0.1:4444"
+
+# Target servers for client connections, space separated.
+# Target specification: IP[:PORT[:WEIGHT]] (WEIGHT and PORT optional)
+# WEIGHT defaults to 1, PORT defaults to LISTEN_ADDR port.
+DEFAULT_TARGETS="{{ ip_node0 }}:3306:1 {{ ip_node1 }}:3306:1"
+
+# Other glbd options if any as they would appear on the command line.
+OTHER_OPTIONS="--single --watchdog exec:'/usr/local/bin/mysql-check.sh -u{{ user_remote }} -p{{ pass_remote }}'"

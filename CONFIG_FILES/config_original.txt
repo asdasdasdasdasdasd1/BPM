@@ -1,0 +1,5 @@
+Host bpm
+     HostName 172.30.25.63
+     User everisbpm
+     Port 22
+     IdentityFile /D/Usuarios/JOSCOE/Documents/Pichincha/bpm/bpm

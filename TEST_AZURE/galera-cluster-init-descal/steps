@@ -1,0 +1,16 @@
+# Modificar en cluster/vars/main.yaml
+    ip_node0: <ip_del_primer_nodo>
+    ip_node1: <ip_del_segundo_nodo>
+    user_remote: <usuario_de_conexion_remota_mysql>
+    pass_remote: <contraseña_de_conexion_remota_mysql>
+
+# Modificar en cluster/tasks/create-cluster.yaml
+    Cambiar en las tareas Insert template node0 e Insert template nodeX el hostname del primer nodo
+
+# Cambiar en site.yaml el host en donde se instalara el cluster 
+
+# Ejecutar el playbook
+    $ ansible-playbook site.yaml
+
+# Realizar la configuración segura de mysql
+    $ sudo mysql_secure_installation
