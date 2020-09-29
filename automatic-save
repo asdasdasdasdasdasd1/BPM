@@ -1,0 +1,4 @@
+while read IP; do
+        scp id_rsa user01@$IP:/home/user01/.ssh/
+        ssh user01@$IP chmod 600 /home/user01/.ssh/id_rsa < /dev/null
+done < file.lst
